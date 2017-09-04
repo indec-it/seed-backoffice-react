@@ -1,0 +1,76 @@
+@import "bootstrap/app";
+@import "common";
+@import "react-datepicker";
+@import "footer";
+@import "buttons";
+@import "form";
+@import "tables";
+@import "dropzone";
+
+html, body {
+  overflow-y: auto;
+  background-color: $bg-app;
+}
+
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  outline: none;
+}
+
+main {
+  padding-top: 15px;
+  margin-bottom: 80px;
+}
+
+select.max {
+  max-width: 300px;
+  padding: 6px 2px;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+label {
+  display: inline;
+  font-weight: normal;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+// Solution scroll horizontal
+@media (min-width: 768px) {
+  .container {
+    width: inherit;
+  }
+}
+
+.box-container {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin: 30px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.top-line-color {
+  height: 10px;
+  background-color: $lg-grey;
+}
+
+.logo {
+  margin: 20px 12px;
+}

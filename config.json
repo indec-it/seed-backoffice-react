@@ -1,0 +1,9 @@
+{
+  "mode": "development",
+  "endpoint": "newapi.indec.gov.ar",
+  "server": {
+    "port": 3000,
+    "static": "public",
+    "morgan": "dev"
+  }
+}

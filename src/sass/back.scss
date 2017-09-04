@@ -1,0 +1,95 @@
+@import "bootstrap/back";
+@import "common";
+@import "react-datepicker";
+@import "footer";
+@import "buttons";
+@import "form";
+@import "tables";
+@import "dropzone";
+
+html, body {
+  overflow-y: auto;
+  background-color: $bg-app;
+}
+
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  outline: none;
+}
+
+main {
+  padding-top: 20px;
+  margin-bottom: 80px;
+}
+
+select.max {
+  max-width: 300px;
+  padding: 6px 2px;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+label {
+  display: inline;
+  font-weight: normal;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+// Solution scroll horizontal
+@media (min-width: 768px) {
+  .container {
+    width: inherit;
+  }
+}
+
+.box-container {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin: 30px 15px;
+  background-color: #f6f9fb;
+  border-radius: 10px;
+}
+
+.no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar {
+  height: 50px;
+  text-transform: capitalize;
+  background-color: $lg-grey;
+  border-radius: 0;
+  li {
+    font-size: 14px;
+    list-style-type: none;
+    span {
+      margin-right: 5px;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      line-height: 44px;
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #9ee2ff;
+    }
+  }
+  .navbar-inverse {
+    background-color: $lg-grey;
+    border-color: $lg-grey;
+  }
+}

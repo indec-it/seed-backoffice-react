@@ -1,0 +1,20 @@
+table > thead {
+  background-color: $accent-color-light;
+}
+
+.table-striped > tbody {
+  > tr:nth-child(even) {
+    background-color: #ebebeb;
+  }
+  > tr:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+}
+
+.table-vertical-middle td {
+  vertical-align: middle !important;
+}
+
+.td-users-tools {
+  width: 200px;
+}
