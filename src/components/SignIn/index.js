@@ -33,7 +33,9 @@ class SignIn extends Component {
                     <Col sm={4} smOffset={4}>
                         <Form onSubmit={e => this.handleSubmit(e)}>
                             <FormGroup>
-                                <h1><FontAwesome name="chevron-circle-right"/> Iniciar sesión</h1>
+                                <h1>
+                                    <FontAwesome name="chevron-circle-right"/> Iniciar sesión
+                                </h1>
                             </FormGroup>
                             <FormGroup controlId="username">
                                 <FormControl
@@ -58,7 +60,8 @@ class SignIn extends Component {
                                     <FontAwesome name="power-off"/> Ingresar
                                 </Button>
                             </FormGroup>
-                            {this.state.invalidLogin && <FormGroup>
+                            {this.state.invalidLogin &&
+                            <FormGroup>
                                 <span>Usuario o password no válidos.</span>
                             </FormGroup>}
                         </Form>

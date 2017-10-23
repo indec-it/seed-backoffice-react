@@ -41,7 +41,9 @@ class TextField extends Component {
     }
 
     render() {
-        const {control, label, value, maxLength, minLength} = this.props;
+        const {
+            control, label, value, maxLength, minLength
+        } = this.props;
         return (
             <FormGroup controlId={control} validationState={this.validateInput()}>
                 <ControlLabel>{label}</ControlLabel>

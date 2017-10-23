@@ -19,7 +19,9 @@ class PeopleSearch extends Component {
     }
 
     render() {
-        const {searchTerms, states, onChange, onSubmit} = this.props;
+        const {
+            searchTerms, states, onChange, onSubmit
+        } = this.props;
         return (
             <Form inline onSubmit={e => this.handleSubmit(e)}>
                 <FormGroup>

@@ -20,13 +20,6 @@ class PeopleList extends Component {
         users: []
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchTerms: ''
-        };
-    }
-
     componentDidMount() {
         this.props.requestUsers();
     }

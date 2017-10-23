@@ -74,7 +74,8 @@ class UserEditor extends Component {
                 <Row className="text-right">
                     <Col sm={2} smOffset={10}>
                         {saving && <LoadingButton/>}
-                        {!saving && <Button
+                        {!saving &&
+                        <Button
                             bsStyle="primary"
                             onClick={() => this.handleSubmit()}
                             className="btn-group-justified"

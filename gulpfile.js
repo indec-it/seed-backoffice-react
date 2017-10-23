@@ -1,5 +1,5 @@
 require('require-dir')('./gulp');
-let gulp = require('gulp');
+const gulp = require('gulp');
 
 gulp.task('test', ['sasslint', 'eslint']);
 

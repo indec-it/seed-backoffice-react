@@ -10,14 +10,17 @@ module.exports = {
     entry: {
         app: [
             'webpack-hot-middleware/client',
+            'react-hot-loader/patch',
             './src/app'
         ],
         back: [
             'webpack-hot-middleware/client',
+            'react-hot-loader/patch',
             './src/back'
         ],
         signIn: [
             'webpack-hot-middleware/client',
+            'react-hot-loader/patch',
             './src/signIn'
         ]
     },
@@ -38,15 +41,19 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             use: [{
-                loader: 'react-hot-loader'
+                loader: 'react-hot-loader/webpack'
             }, {
                 loader: 'babel-loader', options: {cacheDirectory: '.babel-cache'}
             }]
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract({
-                use: ['css-loader', 'sass-loader?outputStyle=expanded']
-            })
+            loader: [
+                'css-hot-loader'
+            ].concat(
+                ExtractTextPlugin.extract({
+                    use: ['css-loader', 'sass-loader?outputStyle=expanded']
+                })
+            )
         }, {
             test: /\.css$/,
             use: ['style-loader', 'css-loader']
