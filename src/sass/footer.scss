@@ -1,18 +1,26 @@
 footer {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 999;
-  min-height: 50px;
+  min-height: 40px;
   background-color: #f8f8f8;
-  border-top: 1px solid $primary-color-dark;
+  border-top: 1px solid $dark-primary-color;
   div.row > div {
-    margin-top: 11px;
-    color: $primary-color-dark;
+    margin-top: 7px;
+    color: $dark-primary-color;
   }
   .version {
-    margin-top: -3px;
     font-size: 10px;
+  }
+  .col-sm-2 {
+    padding: 0;
+  }
+  small {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 8pt;
+    line-height: 8pt;
   }
 }

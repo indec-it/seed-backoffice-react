@@ -1,27 +1,10 @@
 import React from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {hot} from 'react-hot-loader';
 
-import Users from '../Users';
-import Logs from '../Logs';
-import Home from '../Home';
-
-import Footer from './Footer';
-import Header from './Header';
+import Routes from './Routes';
 
 const App = () => (
-    <HashRouter>
-        <div>
-            <Header/>
-            <main>
-                <Switch>
-                    <Route path="/logs" component={Logs}/>
-                    <Route path="/users" component={Users}/>
-                    <Route path="/" component={Home}/>
-                </Switch>
-            </main>
-            <Footer/>
-        </div>
-    </HashRouter>
+    <Routes/>
 );
 
-export default App;
+export default hot(module)(App);

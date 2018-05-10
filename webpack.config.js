@@ -1,26 +1,22 @@
 const path = require('path');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
+    mode: process.env.NODE_ENV,
     entry: {
         app: [
             'webpack-hot-middleware/client',
-            'react-hot-loader/patch',
             './src/app'
         ],
         back: [
             'webpack-hot-middleware/client',
-            'react-hot-loader/patch',
             './src/back'
         ],
         signIn: [
             'webpack-hot-middleware/client',
-            'react-hot-loader/patch',
             './src/signIn'
         ]
     },
@@ -33,30 +29,37 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'public/assets'),
-        publicPath: '/assets/',
-        filename: '[name].bundle.js'
+        publicPath: '/assets/'
     },
     module: {
         rules: [{
-            test: /\.jsx?$/,
+            test: /\.js$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'react-hot-loader/webpack'
-            }, {
-                loader: 'babel-loader', options: {cacheDirectory: '.babel-cache'}
-            }]
+            loader: 'babel-loader',
+            options: {plugins: 'react-hot-loader/babel', cacheDirectory: '.babel-cache'}
+        }, {
+            test: /\.js$/,
+            include: [
+                /node_modules\/react-native-/,
+                /node_modules\/react-router-native/,
+                /node_modules\/@indec/
+            ],
+            loader: 'babel-loader',
+            query: {
+                presets: ['react-app'],
+                cacheDirectory: '.babel-cache'
+            }
         }, {
             test: /\.scss$/,
-            loader: [
-                'css-hot-loader'
-            ].concat(
-                ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader?outputStyle=expanded']
-                })
-            )
+            use: [
+                'css-hot-loader',
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                'sass-loader?outputStyle=expanded'
+            ]
         }, {
             test: /\.css$/,
-            use: ['style-loader', 'css-loader']
+            use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader']
         }, {
             exclude: [
                 /\.html$/,
@@ -73,17 +76,22 @@ module.exports = {
             options: {name: '[name].[ext]'}
         }]
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     plugins: [
         new webpack.DefinePlugin({
             VERSION: JSON.stringify(require('./package.json').version),
-            NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+            NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+            ENDPOINT: JSON.stringify(require('./config.json').endpoint)
         }),
-        new LodashModuleReplacementPlugin,
-        new webpack.optimize.CommonsChunkPlugin('vendor'),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new webpack.HotModuleReplacementPlugin(),
         new CaseSensitivePathsPlugin(),
         new FriendlyErrorsWebpackPlugin(),
-        new ExtractTextPlugin('[name].bundle.css')
+        new MiniCssExtractPlugin({filename: '[name].css'})
     ],
     node: {
         fs: 'empty',
@@ -91,3 +99,4 @@ module.exports = {
         tls: 'empty'
     }
 };
+

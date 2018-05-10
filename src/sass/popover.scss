@@ -1,0 +1,50 @@
+.popover-reasign {
+  min-width: 300px;
+  color: $light-primary-color;
+  background-color: $default-primary-color;
+  &.popover.bottom > .arrow:after {
+    border-bottom-color: $default-primary-color;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.popover {
+  z-index: 1000;
+}
+
+.popover-info {
+  width: 720px;
+  max-width: 100rem;
+  margin-right: 10px;
+  .popover-border-left {
+    border-left: 1px solid $header-table;
+  }
+  .popover-header {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    color: $light-primary-color;
+    background-color: $header-table;
+  }
+  .popover-content {
+    padding: 5px 0;
+  }
+};
+
+.popover-diary {
+  min-width: 200px;
+  color: $light-primary-color;
+  background-color: $header-table;
+  .popover-hr {
+    margin: 10px 0;
+  }
+  textarea {
+    min-height: 80px;
+    color: $text-primary-color;
+    background-color: $light-primary-color;
+  }
+  &.popover.bottom > .arrow:after {
+    border-bottom-color: $header-table;
+  }
+}

@@ -1,16 +1,20 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 $btn-primary-color: #fff;
-$btn-primary-bg: #452f8f;
-$btn-primary-border: #452f8f;
+$btn-primary-bg: #455a64;
+$btn-primary-border: #455a64;
+
+$btn-success-color: #fff;
+$btn-success-bg: #333;
+$btn-success-border: #000;
 
 // Selected button
 $btn-active-text-color: #fff;
-$btn-active-bg-color: #452f8f;
+$btn-active-bg-color: #03a9f4;
 $btn-active-border-color: #fff;
 
 // Selected button (on hover)
-$btn-active-hover-bg-color: #0b2846;
+$btn-active-hover-bg-color: #455a64;
 
 // redefined input-sm & all *-sm suffix
 $input-height-small: 22px;
@@ -20,26 +24,9 @@ $font-size-small: 14px;
 
 // nav
 $navbar-height: 27px;
-$navbar-default-bg: #222049;
 
 // Shared nav styles
 $nav-link-padding: 3px 15px;
-$nav-link-hover-bg: #452f8f;
 
 // progress-bar
 $progress-bar-bg: #d5d5d5;
-
-// alert
-$alert-danger-bg: #fff;
-$alert-danger-text: #dc0068;
-$alert-danger-border: #dc0068;
-
-$alert-warning-bg: #fff;
-$alert-warning-text: #ff7224;
-$alert-warning-border: #ff7224;
-
-$alert-success-bg: #dff0d8;
-$alert-success-text: #3c763d;
-$alert-success-border: #3c763d;
-
-$state-danger-text: #dc0068;

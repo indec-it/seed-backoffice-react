@@ -1,0 +1,45 @@
+.panel-group {
+  margin-bottom: 10px;
+  page-break-after: always;
+  a {
+    color: $dark-primary-color;
+  }
+  .panel {
+    margin: 0 1em 1em;
+    .panel-body {
+      padding-top: 1.5em;
+      .members-title {
+        margin: 2em 1em 1em;
+      }
+      .panel-heading {
+        padding: 10px;
+        .container {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+.list-panel {
+  border: 0;
+  box-shadow: 0;
+  .list-heading {
+    padding: 0;
+    background-color: #fff;
+    &:focus>.panel-title .fa-chevron-circle-right {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@media print {
+  .panel-collapse,
+  .panel-collapse .collapse {
+    display: block !important;
+    height: auto !important;
+  }
+  .hidden-print {
+    display: none;
+  }
+}

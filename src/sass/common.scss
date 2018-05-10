@@ -1,5 +1,5 @@
 @import "font-awesome-overrides";
-@import "~font-awesome/scss/font-awesome";
+@import "~components-font-awesome/scss/font-awesome";
 @import "palette";
 
 small {
@@ -9,7 +9,7 @@ small {
 h2, h3, h1 {
   margin-bottom: 5px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: $accent-color;
+  color: $text-primary-color;
   .fa-chevron-circle-right {
     margin-right: 10px;
   }
@@ -19,7 +19,7 @@ h2, h3, h1 {
   min-height: 350px;
   padding-top: 15px;
   margin-top: 10px;
-  background-color: #f5f5f5;
+  background-color: $light-primary-color;
   .sign-in {
     margin-top: 50px;
   }
@@ -27,6 +27,18 @@ h2, h3, h1 {
 
 .hr-title {
   margin: 10px 0 15px;
-  border: 0;
-  border-bottom: 1px solid #839ba8 !important;
+  border-bottom: 1px solid $text-primary-color !important;
+}
+
+.hr-filters {
+  margin: 5px 0;
+}
+
+.title-filters {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.margin-top-panel {
+  margin-top: 18px;
 }

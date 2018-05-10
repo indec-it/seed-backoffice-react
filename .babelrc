@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "lodash"
+    "lodash",
+    "react-hot-loader/babel"
   ],
   "presets": [
     "babel-preset-react-app"

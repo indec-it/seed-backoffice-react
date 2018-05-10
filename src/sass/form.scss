@@ -16,11 +16,11 @@ textarea {
 
 input[type="checkbox"] {
   padding: 6px;
-  border: 2px solid $primary-color;
+  border: 2px solid $default-primary-color;
   border-radius: 3px;
   -webkit-appearance: none;
   &:checked {
-    background-color: $primary-color;
+    background-color: $default-primary-color;
   }
   &:focus {
     outline: none;

@@ -1,6 +1,6 @@
 @import "bootstrap/app";
 @import "common";
-@import "react-datepicker";
+@import "~react-select/scss/default";
 @import "footer";
 @import "buttons";
 @import "form";
@@ -9,7 +9,7 @@
 
 html, body {
   overflow-y: auto;
-  background-color: $bg-app;
+  background-color: $light-primary-color;
 }
 
 .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
@@ -41,6 +41,14 @@ label {
   font-weight: normal;
 }
 
+.splash {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  h1 {
+    font-size: 40px;
+  }
+}
+
 .row {
   margin-right: 0;
   margin-left: 0;
@@ -68,7 +76,7 @@ label {
 
 .top-line-color {
   height: 10px;
-  background-color: $lg-grey;
+  background-color: $default-primary-color;
 }
 
 .logo {

@@ -1,16 +1,15 @@
-const path = require('path');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
+    mode: process.env.NODE_ENV,
     entry: {
         app: [
-            './src/polyfills',
             './src/app'
         ],
         back: './src/back',
@@ -24,9 +23,8 @@ module.exports = {
         }
     },
     output: {
-        path: path.join(__dirname, 'public'),
         publicPath: '/assets/',
-        filename: '[name].bundle.js'
+        filename: '[name].js'
     },
     module: {
         rules: [{
@@ -34,10 +32,17 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader'
         }, {
+            test: /\.js$/,
+            include: [
+                /node_modules\/react-native-/,
+                /node_modules\/react-router-native/,
+                /node_modules\/@indec/
+            ],
+            loader: 'babel-loader',
+            query: {presets: ['react-app']}
+        }, {
             test: /\.s?css$/,
-            loader: ExtractTextPlugin.extract({
-                use: ['css-loader', 'sass-loader?outputStyle=compressed']
-            })
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader?outputStyle=compressed']
         }, {
             test: /\.css$/,
             use: ['style-loader', 'css-loader']
@@ -57,16 +62,22 @@ module.exports = {
             options: {name: '[name].[ext]'}
         }]
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     plugins: [
         new webpack.DefinePlugin({
+            AUTH_ENDPOINT: JSON.stringify(global.config.heimdall.endpoint),
             VERSION: JSON.stringify(require('./package.json').version),
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
         new LodashModuleReplacementPlugin,
-        new webpack.optimize.CommonsChunkPlugin('vendor'),
-        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new CaseSensitivePathsPlugin(),
-        new ExtractTextPlugin('[name].bundle.css')
+        new MiniCssExtractPlugin({filename: '[name].css'}),
+        new OptimizeCSSAssetsPlugin({})
     ],
     node: {
         fs: 'empty',

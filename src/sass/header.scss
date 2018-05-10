@@ -1,0 +1,65 @@
+header {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.border-right {
+  padding-right: 25px;
+  margin-right: 25px;
+  border-right: 1px solid #fff;
+}
+
+.logo-header {
+  margin-left: -20px;
+}
+
+
+.navbar {
+  margin-bottom: 0;
+  text-transform: capitalize;
+  background-color: $dark-primary-color;
+  border-radius: 0;
+  li {
+    font-size: 14px;
+    list-style-type: none;
+    background-color: $dark-primary-color;
+    span {
+      margin-right: 5px;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      line-height: 44px;
+      color: $light-primary-color;
+      text-decoration: none;
+      &:hover {
+        color: $accent-color;
+        background-color: $dark-primary-color;
+      }
+    }
+  }
+  h3 {
+    margin: 8px 25px 0 0;
+    span {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: $dark-primary-color;
+}
+
+.navbar-inverse {
+  background-color: $dark-primary-color;
+  border-color: $dark-primary-color;
+  .navbar-nav > li > a {
+    color: $light-primary-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
