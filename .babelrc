@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/proposal-object-rest-spread",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    "@babel/proposal-optional-chaining",
+    "lodash"
+  ],
+  "presets": [
+    "@babel/preset-react"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "transform-react-remove-prop-types",
+          {
+            "ignoreFilenames": [
+              "node_modules"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}

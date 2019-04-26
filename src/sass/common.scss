@@ -1,0 +1,62 @@
+@import "font-awesome-overrides";
+@import "palette";
+
+small {
+  font-size: 95%;
+}
+
+h2, h3, h1 {
+  margin-bottom: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $primary-color;
+  .fa-chevron-circle-right {
+    margin-right: 10px;
+  }
+}
+
+.bg-app {
+  min-height: 350px;
+  padding-top: 15px;
+  margin-top: 10px;
+  background-color: $primary-color-light;
+  .sign-in {
+    margin-top: 50px;
+  }
+}
+
+.hr-title {
+  margin: 10px 0 15px;
+  border-bottom: 1px solid $primary-color-text !important;
+}
+
+.hr-filters {
+  margin: 5px 0;
+}
+
+.title-filters {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.margin-top-panel {
+  margin-top: 18px;
+}
+
+.margin-chart {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.bg-dark {
+  padding: 2px;
+  margin: 2px;
+  color: $white-color;
+  background-color: $primary-color-dark;
+}
+
+.bordered-div {
+  margin-bottom: 6px;
+  border-top: dashed 1px rgb(26, 25, 25);
+  border-left: dashed 1px rgb(26, 25, 25);
+  box-shadow: 4px 4px rgb(19, 19, 19);
+}

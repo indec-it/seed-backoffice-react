@@ -1,0 +1,84 @@
+// indec colors
+$cyan: rgba(2, 141, 200, 1);
+$violet: #222983;
+$magenta: #dc0068;
+$gray: #58565a;
+
+// complementary colors
+$light-gray: rgba(225, 225, 225, 1);
+$black: #000;
+$white: #fff;
+
+// dwelling colors
+$dwelling: #006496;
+
+// household colors
+$household: #50315c;
+
+// members colors
+$members: #444d4a;
+
+.info {
+  display: inline;
+  width: 50%;
+  font-size: 11px;
+  .reference {
+    width: 12px;
+    height: 11px;
+  }
+  .light-blue {
+    background-color: $cyan;
+  }
+  .blue {
+    background-color: rgba(27, 83, 120, 1);
+  }
+  .light-gray {
+    background-color: $light-gray;
+  }
+}
+
+.box-doughnut {
+  padding-bottom: 5px;
+  margin: 5px;
+  background-color: $white;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px 0 rgba(225,225,225,1);
+  hr {
+    margin: 3px 10px;
+  }
+  h4 {
+    padding: 5px;
+    margin-top: -1px;
+    color: $white;
+    border-radius: 6px 6px 0 0;
+    &.province {
+      background-color: #8c8c8c;
+    }
+    &.dwelling {
+      background-color: $dwelling;
+    }
+    &.household {
+      background-color: $household;
+    }
+    &.members {
+      background-color: $members;
+    }
+  }
+  h5 {
+    margin-left: 10px;
+    &.dwelling-no-response-text {
+      color: $dwelling;
+    }
+    &.household-no-response-text {
+      color: $household;
+    }
+    &.members-no-response-text {
+      color: $members;
+    }
+  }
+}
+
+.btn-clean {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,27 @@
+image: node:10-alpine
+cache:
+  key: "10-alpine"
+  paths:
+    - node_modules/
+
+before_script:
+  - apk add --update git
+  - yarn install
+
+test:
+  script:
+    - npm test
+  tags:
+    - docker
+
+build:
+  stage: build
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - npm run build
+  only:
+    - master
+  tags:
+    - docker

@@ -1,0 +1,126 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "lodash"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "16.4"
+    }
+  },
+  "extends": "airbnb",
+  "globals": {
+    "NODE_ENV": true,
+    "ENDPOINT": true,
+    "VERSION": true,
+    "AUTH_ENDPOINT": true,
+    "fetch": true,
+    "FormData": true,
+    "window": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id"
+        ]
+      }
+    ],
+    "function-paren-newline": "off",
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "import/no-cycle": [
+      "off"
+    ],
+    "import/no-extraneous-dependencies": [
+      "off"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "max-len": [
+      "error",
+      150
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js"
+        ]
+      }
+    ],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "never"
+      }
+    ],
+    "react/jsx-indent": [
+      "error",
+      4
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      4
+    ],
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "specialLink": [],
+        "aspects": [
+          "noHref",
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "lodash/matches-prop-shorthand": [
+      "error",
+      "never"
+    ],
+    "lodash/prop-shorthand": [
+      "error",
+      "never"
+    ],
+    "lodash/prefer-lodash-method": [
+      "error",
+      {
+        "ignoreMethods": [
+          "assign",
+          "find",
+          "map"
+        ]
+      }
+    ]
+  }
+}

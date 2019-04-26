@@ -1,0 +1,36 @@
+.btn {
+  .alert {
+    font-size: 11.5px;
+  }
+}
+
+.btn-default {
+  &:hover,
+  &.active,
+  &.active:hover,
+  &:active.hover,
+  &.active:focus,
+  &:active.focus {
+    color: $btn-active-text-color;
+    background-color: #a0a0a0;
+    border-color: $btn-active-border-color;
+  }
+}
+
+.btn-warning {
+  margin: 2px 3px;
+  svg {
+    color: #fff;
+  }
+  &:hover {
+    background-color: #e27c1c;
+  }
+  &.active {
+    background-color: #c56300;
+    &:hover {
+      background-color: #9e5100;
+    }
+  }
+}
+
+

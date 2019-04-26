@@ -1,0 +1,49 @@
+input[type=number] {
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+}
+
+textarea {
+  min-height: 132px;
+}
+
+.has-feedback label ~ .form-control-feedback {
+  top: 19px;
+  right: 12px;
+}
+
+input[type="checkbox"] {
+  padding: 6px;
+  border: 2px solid $primary-color;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  &:checked {
+    background-color: $primary-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-control:focus {
+  border-color: #0094cf;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 148, 207, 0.6);
+}
+
+.has-success {
+  .control-label {
+    color: #333;
+  }
+  .form-control {
+    border-color: #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    &:focus {
+      border-color: #0094cf;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 148, 207, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 148, 207, 0.6);
+    }
+  }
+}

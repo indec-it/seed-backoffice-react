@@ -1,0 +1,51 @@
+.popover-reasign {
+  min-width: 30vw;
+  max-width: 80vw;
+  color: $primary-color-light;
+  background-color: $primary-color;
+  &.popover.bottom > .arrow:after {
+    border-bottom-color: $primary-color;
+  }
+  span {
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: -15px;
+    color: $white-color;
+  }
+}
+
+.popover-info {
+  min-width: 30vw;
+  max-width: 80vw;
+  margin-right: 10px;
+  .popover-border-left {
+    border-left: 1px solid $header-color-table;
+  }
+  .popover-header {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    color: $primary-color-light;
+    background-color: $header-color-table;
+  }
+  .popover-content {
+    padding: 5px 0;
+  }
+};
+
+.popover-diary {
+  min-width: 200px;
+  color: $primary-color-light;
+  background-color: $header-color-table;
+  .popover-hr {
+    margin: 10px 0;
+  }
+  textarea {
+    min-height: 80px;
+    color: $primary-color-text;
+    background-color: $primary-color-light;
+  }
+  &.popover.bottom > .arrow:after {
+    border-bottom-color: $header-color-table;
+  }
+}

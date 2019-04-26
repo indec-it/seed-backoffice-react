@@ -1,0 +1,96 @@
+{
+    "result":  [
+        {
+            "_id": "5c06ca335566944e7f34e327",
+            "address": "sample street 1",
+            "name": "Sample House 1",
+            "radio": 1,
+            "area:": 2,
+            "segment": 1,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c06ca335566944e7f34e326",
+            "address": "sample street 2",
+            "name": "Sample House 2",
+            "radio": 1,
+            "area:": 2,
+            "segment": 2,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c85",
+            "address": "sample street 3",
+            "name": "Sample House 3",
+            "radio": 1,
+            "area:": 2,
+            "segment": 3,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c86",
+            "address": "sample street 4",
+            "name": "Sample House 4",
+            "radio": 1,
+            "area:": 2,
+            "segment": 4,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c87",
+            "address": "sample street 5",
+            "name": "Sample House 5",
+            "radio": 1,
+            "area:": 2,
+            "segment": 5,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c88",
+            "address": "sample street 6",
+            "name": "Sample House 6",
+            "radio": 1,
+            "area:": 2,
+            "segment": 6,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c89",
+            "address": "sample street 7",
+            "name": "Sample House 7",
+            "radio": 1,
+            "area:": 2,
+            "segment": 7,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c80",
+            "address": "sample street 8",
+            "name": "Sample House 8",
+            "radio": 1,
+            "area:": 2,
+            "segment": 8,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c90",
+            "address": "sample street 9",
+            "name": "Sample House 9",
+            "radio": 1,
+            "area:": 2,
+            "segment": 9,
+            "otherInfo": "Information that are not showed on list"
+        },
+        {
+            "_id": "5c6d6dc48088251740b34c85",
+            "address": "sample street 10",
+            "name": "Sample House 10",
+            "radio": 1,
+            "area:": 2,
+            "segment": 10,
+            "otherInfo": "Information that are not showed on list"
+        }
+    ],
+    "size": 1,
+    "total": 10
+}

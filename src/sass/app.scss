@@ -1,0 +1,150 @@
+@import "~bootstrap-scss";
+@import "bootstrap/overrides";
+@import "common";
+@import "footer";
+@import "buttons";
+@import "form";
+@import "tables";
+@import "dropzone";
+@import "credentials";
+@import "header";
+@import "popover";
+@import "~react-bootstrap-table/css/react-bootstrap-table";
+@import "toggle";
+@import "dashboard";
+@import "context-menu";
+@import "~react-datepicker/dist/react-datepicker";
+
+// sass-lint:disable class-name-format
+.react-datepicker__day-name, 
+.react-datepicker__day,
+.react-datepicker__time-name {
+  width: 2.5rem;
+  font-size: 12px;
+  line-height: 2.5rem;
+}
+
+.react-datepicker__month-read-view,
+.react-datepicker__year-read-view,
+.react-datepicker__current-month,
+.react-datepicker__year-option,
+.react-datepicker__month-option {
+  width: 100%;
+  font-size: 12px;
+  line-height: 2.5rem;
+}
+// sass-lint:enable class-name-format
+
+// sass-lint:disable no-ids
+#root {
+  position: relative;
+  min-height: 100%;
+}
+// sass-lint:enable no-ids
+
+.btn {
+  &:focus, &.focus, &:active:focus, &:active.focus {
+    outline: none;
+  }
+}
+
+main {
+  min-height: 99vh;
+  padding-top: 55px;
+  padding-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 200px;
+  }
+}
+
+.loading {
+  margin-top: 20px;
+}
+
+select.max {
+  max-width: 300px;
+  padding: 6px 2px;
+}
+
+a {
+  color: $primary-color-text;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $primary-color-light;
+    text-decoration: none;
+  }
+}
+
+.fa-trash, .fa-exclamation-triangle {
+  color: #cf0000;
+}
+
+label {
+  display: inline;
+  font-weight: normal;
+}
+
+.row {
+  padding-bottom: 3px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: inherit;
+  }
+}
+
+.pie-chart {
+  background-color: $primary-color-light;
+}
+
+.no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.dwelling-number {
+  margin-top: 20px;
+  border-left: solid 1px rgba(0, 0, 0, .4);
+}
+
+.vertical-margin {
+  margin: 20px 0;
+}
+
+.push-down {
+  margin-top: 9px;
+}
+
+.form-group {
+  margin: 0;
+}
+
+.alert {
+  padding: 6px;
+  margin: 0;
+}
+
+form.form-inline .form-group {
+  margin: 10px 30px 10px 0;
+}
+
+.margin-top-splash {
+  margin-top: 60px;
+}
+
+.modal-lg {
+  width: 96vw;
+}
+
+.fixed-side {
+  height: 50vh;
+  max-height: 50vh;
+  padding: 1px 3px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}

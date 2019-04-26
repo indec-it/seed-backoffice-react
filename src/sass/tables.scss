@@ -1,0 +1,180 @@
+.table-vertical-middle td, th {
+  vertical-align: middle !important;
+}
+
+.data-grid-header {
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+}
+
+.divider {
+  border-right: solid thin #000;
+}
+
+.data-grid-content {
+  overflow-y: scroll;
+  @media screen and(min-height: 500px) {
+    min-height: 57vh;
+    max-height: 57vh;
+  }
+
+  @media screen and(min-height: 800px) {
+    min-height: 70vh;
+    max-height: 70vh;
+  }
+  & div.col-sm-1, & div-col-sm-3 {
+    vertical-align: middle !important;
+  }
+  & > .row:nth-child(even) {
+    height: 40px;
+    padding-top: 10px;
+    color: $primary-color-dark;
+    background-color: #ebebeb;
+  }
+  & > .row:nth-child(odd) {
+    height: 40px;
+    padding-top: 10px;
+    color: $primary-color-dark;
+    background-color: #f5f5f5;
+  }
+  // sass-lint:disable class-name-format
+  .col-sm-5 > .Select {
+    margin-top: -10px;
+  }
+}
+
+.data-grid-footer {
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+}
+
+.head-table {
+  height: 35px;
+  margin-top: 30px;
+  color: $primary-color-light;
+  background-color: $primary-color-dark;
+  border-left-color: 1px solid $primary-color-light;
+}
+
+table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  th {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $header-color-table;
+  }
+}
+
+.review-list > .row > .col-md-12 > .table-responsive {
+  @media screen and(min-height: 500px) {
+    min-height: 59vh;
+    max-height: 59vh;
+  }
+
+  @media screen and(min-height: 700px) {
+    min-height: 70vh;
+    max-height: 70vh;
+  }
+
+  @media screen and(min-height: 800px) {
+    min-height: 74vh;
+    max-height: 74vh;
+  }
+
+  table {
+    & > thead {
+      color: $primary-color;
+    }
+    margin-top: 0;
+  }
+}
+
+.table-striped > tbody {
+  > tr:nth-child(even) {
+    background-color: #fff;
+  }
+  > tr:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+}
+
+.review-list-filter {
+  padding-bottom: 10px;
+}
+
+.seeing {
+  margin-top: 10px;
+}
+
+.bordered {
+  padding-left: 30px;
+  div {
+    padding: auto;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    outline: 2px solid #ccc;
+    outline-offset: 0;
+    -moz-outline-radius: 5px 0 5px 5px;
+  }
+}
+
+.monitoring {
+  tbody {
+    > tr:nth-child(even) {
+      background-color: #fff;
+      &:hover {
+        background-color: #eee;
+      }
+    }
+    > tr:nth-child(odd) {
+      background-color: #f7f7f7;
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+  h2 > .btn {
+    float: right;
+    margin-top: -5px;
+    margin-right: 20px;
+  }
+  th {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+  }
+  td {
+    text-align: center;
+    vertical-align: middle;
+    &[colspan="2"] {
+      text-align: left;
+    }
+  }
+}
+
+.bordered > div > h4 > button {
+  float: left;
+  margin-top: -5px;
+  .fa {
+    color: $primary-color-dark;
+    animation: spin 10s infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+.dirty {
+  color: $primary-color-light;
+  background-color: $accent-color;
+}

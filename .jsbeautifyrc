@@ -1,0 +1,37 @@
+{
+
+    "key": "ctrl+l",
+    "command": "HookyQR.beautify",
+    "when": "editorFocus",
+    "beautify.onSave": true,
+    "beautify.ignore": ["node_modules/*", ".babel-cache/*"],
+    "js": {
+        "allowed_file_extensions": ["js", "json"],
+        "e4x": true,
+        "brace_style": "collapse,preserve-inline",
+        "break_chained_methods": false,
+        "end_with_newline": true,
+        "eval_code": true,
+        "indent_char": " ",
+        "indent_size": 4,
+        "indent_with_tabs": false,
+        "jslint_happy": true,
+        "keep_array_indentation": true,
+        "keep_function_indentation": true,
+        "max_preserve_newlines": 2,
+        "preserve_newlines": false,
+        "space_after_anon_function": false,
+        "space_before_conditional": false,
+        "space_in_empty_paren": false,
+        "space_in_paren": false,
+        "unescape_strings": false,
+        "wrap_line_length": 120,
+        "jsx": true,
+        "unindent_chained_methods": false,
+        "eol": "\n"
+    },
+    "css": {
+        "indent_size": 2,
+        "newline_between_rules": true
+    }
+}

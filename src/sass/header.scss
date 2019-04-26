@@ -1,0 +1,48 @@
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  .alert {
+    margin-top: -22px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .navbar {
+    li {
+      font-size: 14px;
+      list-style-type: none;
+      a {
+        color: $white-color;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+    &.navbar-inverse {
+      background-color: $primary-color-dark;
+      border-radius: 0;
+      .navbar-nav {
+        > li {
+          > a {
+            line-height: 30px;
+            color: $white-color;
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+      }
+      .navbar-brand {
+        height: 38px;
+        padding: 10px 30px 0 25px;
+      }
+      .navbar-collapse {
+        background-color: $primary-color-dark;
+      }
+      .navbar-toggle {
+        margin-top: 2px;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+}
