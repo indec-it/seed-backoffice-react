@@ -78,7 +78,7 @@
     "moment": "^2.22.2",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "papaparse": "^4.6.1",
+    "papaparse": "^5.2.0",
     "prop-types": "^15.6.2",
     "rc-time-picker": "^3.4.0",
     "react": "^16.8.6",
